@@ -1,21 +1,53 @@
+
+<meta charset = "utf-8">
+
+
+
+<script type="text/javascript">
+    window.onload = function () {
+        (function(){
+            var date = new Date();//paneme aja õigel ajal lukku
+            var time = date.getHours() + ':' +
+                date.getMinutes() + ':'
+                + date.getSeconds();
+                document.getElementsByTagName('div')[0].innerHTML = "Aeg JS'is: "+time;
+            window.setTimeout(arguments.callee, 1000);
+        })();
+    }
+
+    
+</script>
+
+
+
 <?php
 require 'components.php';
 require 'function.php';
-$name = "Martini";
+$name = "Tarmo";
 
-//tagasi algusesse
+// üherealine kommentaar
+
+/*
+See on 
+kommentaar
+mitmel real
+*/
+
+// tagasi algusesse
 home();
+menu($menu_begin, $menu_arr,$menu_end);
 
-menu($menu_begin, $menu_arr, $menu_end);
 //näitame praegust aega ja anname soovitusi
+
 aeg();
-
-//näited teksti kuvamise kohta
-echo "<br>";
-echo "$name esimene phps kirjutatud lause!<br>";
-
-echo '$name esimene phps kirjutatud lause!';
-
+echo "<div></div>";
+// näited teksti kuvamise kohta
+echo "$name esimene PHP's kirjutatud lause!<br>";
+echo '<b>$name esimene PHPs kirjutatud lause!</b><br>';
 echo "Nüüd vaatame täpitähti<br>";
+
+GetVisitorIp();
+
+counter();
 
 ?>

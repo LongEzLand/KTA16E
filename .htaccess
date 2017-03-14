@@ -1,0 +1,13 @@
+ AuthType Basic
+ AuthName "protected"
+ AuthUserFile C:\wamp\www\kta16e_matu\.htpasswd
+ Require valid-user
+
+<files "*.txt">
+
+deny from all
+
+</files>
+
+# Http://htaccesstools.com
+
